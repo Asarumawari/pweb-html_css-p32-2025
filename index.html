@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>James Morgan McGill - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      font-family:'Segoe UI', Tahoma;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .left {
+      flex: 5.5;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background: linear-gradient(135deg, 
+        #1a1a1a 0%, 
+        #2d1b13 40%, 
+        #3a2a1f 70%, 
+        #1f1f1f 100%);
+      backdrop-filter: blur(15px);
+    }
+
+    nav { 
+      display: flex; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    }
+    
+    nav a { 
+      color: rgba(255,255,255,0.9); 
+      text-decoration: none; 
+      font-weight: bold;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover { 
+      background: rgba(139,69,19,0.2);
+      color: #fff;
+    }
+
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;   
+      align-items: center;      
+      position: relative;
+    }
+
+    .content section {
+      display: none;
+      max-width: 600px;
+    }
+
+    section:target {
+      display: block;
+    }
+
+    .content:not(:has(:target)) #about {
+      display: block;
+    }
+
+    .right {
+      flex: 4.5;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url("Asset/Saul3.png") center/cover no-repeat;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .tagline { 
+      font-size: 22px; 
+      font-weight: bold; 
+      margin: 10px 0; 
+      position: relative; 
+      z-index: 2;
+    }
+
+    .social-links { 
+      margin-top: 15px; 
+      display: flex; 
+      gap: 15px; 
+      justify-content: center; 
+      position: relative; 
+      z-index: 2;
+    }
+    .social-links img { width: 30px; height: 30px; filter: brightness(0) invert(1); }
+  </style>
+</head>
+
+<body>
+  <div class="left">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hi folks! My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. 
+          Once upon a time, I was a lawyer, but life has a funny way of turning things around. After a big shift in job prospects and demand, I decided to take on a whole new path in my life and became a third semester Information Technology student at Institut Teknologi Sepuluh Nopember (ITS).</p>
+        <p>While I’m diving deep into the world of coding, cybersecurity, and all that tech magic stuff, 
+          I still occasionally put on my lawyer hat when the situation calls for it. Old habits die hard, after all.</p>  
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>AI Lawyer Assistant, Legal Website, Cybersecurity Tool.</p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <p>Lawyer at HHM, Wexler McGill Startup, Virtual Lawyer.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>Negotiation, Problem Solving, Public Speaking.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+      </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="overlay"></div>
+    <div class="tagline">Hi folks, it's Saul Goodman!</div>
+    <div class="tagline">Lawyer and Cybersecurity</div>
+    <div class="social-links">
+      <a href="#"><img src="Asset/email.png" alt="Email"></a>
+      <a href="#"><img src="Asset/github.png" alt="GitHub"></a>
+      <a href="#"><img src="Asset/instagram.webp" alt="Instagram"></a>
+      <a href="#"><img src="Asset/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+</body>
+</html>
