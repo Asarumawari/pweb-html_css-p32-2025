@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>James Morgan McGill - CV</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .cv-container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .sidebar {
+      background: #460701e5;
+      color: #fff;
+      flex: 1;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .cv-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
+    }
+
+    .sidebar h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .sidebar p {
+      font-size: 0.9rem;
+      color: #ffecec;
+    }
+
+    /* Contact box */
+    .contact-box {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .contact-box strong {
+      display: inline-block;
+      width: 70px;
+    }
+
+    /* Social icons */
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .social-links img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .social-links img:hover {
+      transform: scale(1.2);
+      filter: brightness(0.8) invert(0.9);
+    }
+
+    /* Konten utama */
+    .cv-content {
+      flex: 2;
+      padding: 30px;
+    }
+
+    .cv-content section {
+      margin-bottom: 25px;
+    }
+
+    .cv-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      border-bottom: 2px solid #f28b82;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .cv-content p, 
+    .cv-content li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .cv-content ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .skills-grid span {
+      display: inline-block;
+      background: #f28b82;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .skills-grid span:hover {
+      transform: scale(1.05);
+      background: #e57373;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <aside class="sidebar">
+      <img src="Asset/Saul1.jpg" alt="Saul Goodman" class="cv-pic">
+      <h2>James Morgan McGill</h2>
+      <p>Frontend Developer Wannabe</p>
+
+      <div class="contact-box">
+        <p><strong>Email:</strong> saul@example.com</p>
+        <p><strong>Phone:</strong> +62 812-3456-7890</p>
+        <p><strong>Address:</strong> Albuquerque, New Mexico</p>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><img src="Asset/github.png" alt="GitHub"></a>
+        <a href="#"><img src="Asset/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="Asset/instagram.webp" alt="Instagram"></a>
+        <a href="#"><img src="Asset/email.png" alt="Email"></a>
+      </div>
+    </aside>
+
+    <main class="cv-content">
+      <section>
+        <h3>About Me</h3>
+        <p>My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. Once upon a time, I was a lawyer, but life has a funny way of turning things around. After a big shift in job prospects and demand, I decided to take on a whole new path in my life and became a third semester Information Technology student at Institut Teknologi Sepuluh Nopember (ITS).</p>
+      </section>
+
+      <section>
+        <h3>Experience</h3>
+        <ul>
+          <li>Lawyer at HHM (2005–2010)</li>
+          <li>Co-founder, Wexler McGill Startup (2012–2015)</li>
+          <li>Cybersecurity Intern, ITS (2023–Present)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <ul>
+          <li>Bachelor of Law, University of American Samoa</li>
+          <li>Bachelor of IT, Institut Teknologi Sepuluh Nopember (Ongoing)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <span>Negotiation</span>
+          <span>Problem Solving</span>
+          <span>Public Speaking</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
