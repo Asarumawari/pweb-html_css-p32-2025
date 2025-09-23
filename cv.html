@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>James Morgan McGill - CV</title>
   <style>
-    
     * {
       margin: 0;
       padding: 0;
@@ -30,13 +29,19 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-
+    /* Sidebar hijau */
     .sidebar {
-      background: #460701e5;
+      background: #133d36;
       color: #fff;
       flex: 1;
       text-align: center;
       padding: 30px 20px;
+
+      /* Biar konten ke tengah secara vertical */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .cv-pic {
@@ -55,10 +60,9 @@
 
     .sidebar p {
       font-size: 0.9rem;
-      color: #ffecec;
+      color: #faf8f8;
     }
 
-    /* Contact box */
     .contact-box {
       margin-top: 20px;
       background: rgba(255, 255, 255, 0.2);
@@ -67,6 +71,7 @@
       text-align: left;
       font-size: 0.9rem;
       line-height: 1.6;
+      width: 100%;
     }
 
     .contact-box strong {
@@ -74,7 +79,6 @@
       width: 70px;
     }
 
-    /* Social icons */
     .social-links {
       margin-top: 20px;
       display: flex;
@@ -107,8 +111,8 @@
     .cv-content h3 {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: #2c3e50;
-      border-bottom: 2px solid #f28b82;
+      color: #133d36;
+      border-bottom: 2px solid #0e4607;
       display: inline-block;
       padding-bottom: 4px;
     }
@@ -126,28 +130,28 @@
       margin-left: 20px;
     }
 
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 10px;
+    /* Skill bar */
+    .skill {
+      margin-bottom: 15px;
     }
 
-    .skills-grid span {
-      display: inline-block;
-      background: #f28b82;
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 6px;
-      text-align: center;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: transform 0.2s ease, background 0.2s ease;
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #2c3e50;
     }
 
-    .skills-grid span:hover {
-      transform: scale(1.05);
-      background: #e57373;
+    .skill-bar {
+      background: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .skill-level {
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(to right, #133d36, #6fe96f);
     }
   </style>
 </head>
@@ -175,15 +179,24 @@
     <main class="cv-content">
       <section>
         <h3>About Me</h3>
-        <p>My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. Once upon a time, I was a lawyer, but life has a funny way of turning things around. After a big shift in job prospects and demand, I decided to take on a whole new path in my life and became a third semester Information Technology student at Institut Teknologi Sepuluh Nopember (ITS).</p>
+        <p>Former lawyer turned IT student at ITS. Passionate about law, coding, and building creative solutions at the intersection of both worlds.</p>
       </section>
 
       <section>
         <h3>Experience</h3>
         <ul>
-          <li>Lawyer at HHM (2005–2010)</li>
-          <li>Co-founder, Wexler McGill Startup (2012–2015)</li>
-          <li>Cybersecurity Intern, ITS (2023–Present)</li>
+          <li>
+            <strong>Lawyer at HHM (2005–2010)</strong>  
+            <p>Handled complex criminal and corporate cases, known for persuasive arguments and unconventional legal strategies.</p>
+          </li>
+          <li>
+            <strong>Co-founder, Wexler McGill Startup (2012–2015)</strong>  
+            <p>Built a small-scale legal tech startup focusing on affordable legal services for small businesses and individuals.</p>
+          </li>
+          <li>
+            <strong>Cybersecurity Intern, ITS (2023–Present)</strong>  
+            <p>Assisted in securing student portals and applications, while learning ethical hacking and penetration testing practices.</p>
+          </li>
         </ul>
       </section>
 
@@ -197,10 +210,25 @@
 
       <section>
         <h3>Skills</h3>
-        <div class="skills-grid">
-          <span>Negotiation</span>
-          <span>Problem Solving</span>
-          <span>Public Speaking</span>
+        <div class="skill">
+          <div class="skill-name">Frontend</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Backend</div> 
+          <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Design</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">DevOps</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Soft Skills</div>
+          <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
         </div>
       </section>
     </main>
