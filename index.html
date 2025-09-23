@@ -244,6 +244,63 @@
     .social-links img:hover {
       transform: scale(1.15);
     }
+
+    @media (max-width: 900px) {
+     header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+     nav {
+      margin-top: 10px;
+    }
+
+    .hero {
+     flex-direction: column;
+     text-align: center;
+    }
+
+    .hero img {
+     max-width: 250px;
+     transform: none;
+     margin-top: 20px;
+     order: -1;
+    }
+
+    .hero-text h2 {
+     font-size: 26px;
+    }
+
+    .hero-text p {
+     font-size: 16px;
+    }
+}
+
+   @media (max-width: 600px) {
+    .card-container {
+     grid-template-columns: 1fr;
+    }
+
+    .skills-scroll {
+     flex-direction: column;
+     align-items: center;
+    }
+
+    .skill-card {
+     width: 90%;
+     max-width: 300px;
+    }
+
+    .contact-form-container {
+     width: 90%;
+     padding: 20px;
+    }
+
+    .btn-cv, .btn-submit {
+     width: 100%;
+     text-align: center;
+    }
+   }
   </style>
 </head>
 <body>
@@ -261,7 +318,7 @@
   <section class="hero">
     <div class="hero-text">
       <h2>Hi folks, Jimmy's here!</h2>
-      <p>Hi folks! My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. 
+      <p>My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. 
           Once upon a time, I was a lawyer, but life has a funny way of turning things around. After a big shift in job prospects and demand, I decided to take on a whole new path in my life and became a third semester Information Technology student at Institut Teknologi Sepuluh Nopember (ITS).</p>
       <p>While I’m diving deep into the world of coding, cybersecurity, and all that tech magic stuff, 
           I still occasionally put on my lawyer hat when the situation calls for it. Old habits die hard, after all.</p>
@@ -345,6 +402,5 @@
     </div>
   </div>
 </body>
-</html>
 </html>
 
