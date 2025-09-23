@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>James Morgan McGill - CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - James Morgan McGill</title>
   <style>
     * {
       margin: 0;
@@ -51,23 +52,6 @@
       margin-bottom: 15px;
       border: 3px solid #fff;
     }
-
-   .cv-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: baseline;
-     margin-bottom: 6px;
-   }
-
-   .cv-item {
-    margin-bottom: 15px;
-   }
-
-    .cv-item ul {
-     list-style-type: disc;
-     margin-left: 20px;
-   }
-
 
     .sidebar h2 {
       font-size: 1.4rem;
@@ -140,8 +124,18 @@
     }
 
     .cv-content ul {
-      list-style-type: disc;
-      margin-left: 20px;
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .item {
+      margin-bottom: 15px;
+    }
+
+    .item strong {
+      display: block;
+      font-size: 1rem;
+      color: #333;
     }
 
     .skills-grid {
@@ -168,18 +162,38 @@
     }
 
     .back-link {
-     display: inline-block;
-     margin-top: 20px;
-     text-decoration: none;
-     color: #f28b82;
-     font-weight: 500;
-     transition: color 0.2s ease;
-   }
-
-     .back-link:hover {
-     color: #e57373;
+      display: inline-block;
+      margin-top: 20px;
+      color: #f28b82;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
     }
 
+    .back-link:hover {
+      color: #e57373;
+    }
+
+    @media (max-width: 768px) {
+      .cv-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .cv-content {
+        padding: 20px;
+      }
+
+      .cv-pic {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 10px auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -209,36 +223,26 @@
         <p>Seorang Pengacara sekaligus pemula Cybersecurity yang sedang berfokus mendalami python untuk AI development, network security dengan tools seperti Nmap dan Wireshark, serta web development menggunakan HTML/CSS/JavaScript.</p>
       </section>
 
-     <section>
+      <section>
   <h3>Experience</h3>
-
-  <div class="cv-item">
-    <div class="cv-header">
-      <strong>Associate Lawyer, Davis & Main</strong>
-      <span class="duration">2003 - 2004</span>
-    </div>
+  <div class="item">
+    <strong>Associate Lawyer, Davis & Main <span class="duration"><sub>2003 - 2004</sub></span></strong>
     <ul>
       <li>Menangani kasus hukum besar berdasarkan permintaan klien.</li>
       <li>Mewakili klien dalam melakukan negosiasi kontrak bernilai tinggi.</li>
     </ul>
   </div>
 
-  <div class="cv-item">
-    <div class="cv-header">
-      <strong>Virtual Lawyer Assistant, Freelance</strong>
-      <span class="duration">2013 - Sekarang</span>
-    </div>
+  <div class="item">
+    <strong>Virtual Lawyer Assistant, Freelance <span class="duration"><sub>2013 - Sekarang</sub></span></strong>
     <ul>
       <li>Menangani administrasi kasus-kasus hukum remote untuk klien.</li>
       <li>Mengatur dan mengelola jadwal konsultasi virtual klien via zoom.</li>
     </ul>
   </div>
 
-  <div class="cv-item">
-    <div class="cv-header">
-      <strong>Cybersecurity Advisor, Cyber/Secure</strong>
-      <span class="duration">2024 - Sekarang</span>
-    </div>
+  <div class="item">
+    <strong>Cybersecurity Advisor, CyberIT <span class="duration"><sub>2024 - Sekarang</sub></span></strong>
     <ul>
       <li>Mengembangkan sistem perlindungan sesuai permintaan klien.</li>
       <li>Memberikan strategi keamanan digital kepada klien.</li>
@@ -248,37 +252,31 @@
 
 <section>
   <h3>Education</h3>
-
-  <div class="cv-item">
-    <div class="cv-header">
-      <strong>Law School, University of American Samoa</strong>
-      <span class="duration">Lulus pada tahun 2000</span>
-    </div>
-    <p>Juris Doctor (J.D.) in Law — lulus dengan spesialisasi hukum perdata dan pidana. Aktif di moot court competition.</p>
+  <div class="item">
+    <strong>Law School, University of American Samoa <span class="duration"><sub>Lulus pada tahun 2000</sub></span></strong>
+    <ul>
+      <li>Juris Doctor (J.D.) in Law — lulus dengan spesialisasi hukum perdata dan pidana.</li>
+    </ul>
   </div>
 
-  <div class="cv-item">
-    <div class="cv-header">
-      <strong>Institut Teknologi Sepuluh Nopember</strong>
-      <span class="duration">Ongoing</span>
-    </div>
-    <p>Studi tambahan di Teknologi Informasi — Semester 3</p>
+  <div class="item">
+    <strong>Institut Teknologi Sepuluh Nopember <span class="duration"><sub>Ongoing</sub></span></strong>
+    <ul>
+      <li>Studi tambahan di Teknologi Informasi — Semester 3.</li>
+    </ul>
   </div>
- </section>
+</section>
 
-   <section> 
-    <h3>Skills</h3> 
-    <div class="skills-grid"> 
-      <span>Cybersecurity</span> 
-      <span>Problem Solving</span> 
-      <span>Communication</span> 
-    </div> 
-  </section>
+      <section>
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <span>Cybersecurity</span>
+          <span>Problem Solving</span>
+          <span>Communication</span>
+        </div>
+      </section>
 
-  <section>
-  <a href="index.html" class="back-link">← Back to Portofolio</a>
-  </section>
-
+      <a href="index.html" class="back-link">← Back to Portfolio</a>
     </main>
   </div>
 </body>
