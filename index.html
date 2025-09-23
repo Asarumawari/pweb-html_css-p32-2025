@@ -1,168 +1,288 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>James Morgan McGill - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Tony Stark</title>
   <style>
     body {
       margin: 0;
-      background: black;
-      color: white;
-      font-family:'Segoe UI', Tahoma;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-    }
-
-    .left {
-      flex: 5.5;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      background: linear-gradient(135deg, 
-        #1a1a1a 0%, 
-        #2d1b13 40%, 
-        #3a2a1f 70%, 
-        #1f1f1f 100%);
-      backdrop-filter: blur(15px);
-    }
-
-    nav { 
-      display: flex; 
-      gap: 15px; 
-      margin-bottom: 20px; 
-    }
-    
-    nav a { 
-      color: rgba(255,255,255,0.9); 
-      text-decoration: none; 
-      font-weight: bold;
-      padding: 10px 18px;
-      background: rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover { 
-      background: rgba(139,69,19,0.2);
+      font-family: Arial, sans-serif;
+      background: #0d1f1e;
       color: #fff;
     }
 
-    section h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .content {
-      flex: 1;
+    header {
+      background: #133d36;
+      padding: 15px 30px;
       display: flex;
-      justify-content: center;   
-      align-items: center;      
-      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    .content section {
-      display: none;
-      max-width: 600px;
+    header h1 {
+      font-size: 20px;
+      color: #fff;
     }
 
-    section:target {
-      display: block;
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .content:not(:has(:target)) #about {
-      display: block;
+    nav a:hover {
+      color: #d4a373; 
     }
 
-    .right {
-      flex: 4.5;
-      position: relative;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #0d1f1e, #133d36);
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .hero img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      border: none;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #d4a373; 
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+
+    .card {
+      background: #133d36;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #d4a373;
+    }
+
+    footer {
+      background: #0d1f1e;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .btn-cv {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #d4a373;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn-cv:hover {
+      background: #b07d55;
+    }
+
+    .skills-scroll {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .skill-card {
+      width: 200px;
+      height: 140px;
+      background: #133d36;
+      border-radius: 12px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      text-align: center;
-      background: url("Asset/Saul3.png") center/cover no-repeat;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .tagline { 
-      font-size: 22px; 
-      font-weight: bold; 
-      margin: 10px 0; 
-      position: relative; 
+    .skill-card:hover {
+      transform: scale(1.2);
+      background: #1a5c50;
       z-index: 2;
     }
 
-    .social-links { 
-      margin-top: 15px; 
-      display: flex; 
-      gap: 15px; 
-      justify-content: center; 
-      position: relative; 
-      z-index: 2;
+    .skill-card h3 {
+      margin: 0 0 10px;
+      color: #d4a373;
     }
-    .social-links img { width: 30px; height: 30px; filter: brightness(0) invert(1); }
+
+    .btn-contact {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 18px;
+      background: transparent;
+      border: 2px solid #d4a373;
+      color: #d4a373;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      font-size: 14px;
+    }
+    .btn-contact:hover {
+      background: #d4a373;
+      color: #fff;
+    }
   </style>
 </head>
-
 <body>
-  <div class="left">
+
+  <header>
+    <h1>My Portfolio</h1>
     <nav>
-      <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+      <a href="cv.html">CV</a>
     </nav>
+  </header>
 
-    <div class="content">
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Hi folks! My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. 
-          Once upon a time, I was a lawyer, but life has a funny way of turning things around. After a big shift in job prospects and demand, I decided to take on a whole new path in my life and became a third semester Information Technology student at Institut Teknologi Sepuluh Nopember (ITS).</p>
-        <p>While I’m diving deep into the world of coding, cybersecurity, and all that tech magic stuff, 
-          I still occasionally put on my lawyer hat when the situation calls for it. Old habits die hard, after all.</p>  
-      </section>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm Tony Park</h2>
+      <p>A passionate Front-End Developer who loves building polished UI experiences.</p>
+      <p>I specialize in crafting responsive, user-friendly websites and web applications. With a strong foundation in front-end technologies and a love for design, I enjoy transforming creative ideas into functional digital products. Beyond coding, I value teamwork, continuous learning, and problem-solving.</p>
+      <a href="cv.html" class="btn-cv">View My CV</a>
+    </div>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.HkIbhO8npHy_0T2VN9fTewHaMg?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Profile Picture">
+  </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>AI Lawyer Assistant, Legal Website, Cybersecurity Tool.</p>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <p>Lawyer at HHM, Wexler McGill Startup, Virtual Lawyer.</p>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>Negotiation, Problem Solving, Public Speaking.</p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-      </section>
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://screenshots.webflow.com/sites/5fde1642083cee155e2b1566/20230127082305_46a3e5a6a0f56f36c17a7e1a9aa3ca50.png" alt="Portfolio Website Project">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal website with modern design.</p>
+      </div>
+      <div class="card">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.kV-hdLuGZZRELvWZ3nATbgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mobile App Project">
+        <h3>Mobile App</h3>
+        <p>UI/UX for a learning application with gamification features.</p>
+      </div>
+      <div class="card">
+        <img src="https://topflightapps.com/wp-content/uploads/2020/08/visual-vs-text-on-a-dashboard-.png" alt="Web Dashboard Project">
+        <h3>Web Dashboard</h3>
+        <p>Analytics dashboard with clean UI and smooth interaction.</p>
+      </div>
+      <div class="card">
+        <img src="https://www.istats.com/wp-content/uploads/2018/01/best-website-builder.jpeg" alt="Website Builder Project">
+        <h3>Website Builder Project</h3>
+        <p>A project showcasing the best website builder design and layout concepts</p>
+      </div>
+       <div class="card">
+        <img src="https://www.searchenginejournal.com/wp-content/uploads/2023/08/best-landing-page-examples-64e6080f990bb-sej.png" alt="Website Builder Project">
+        <h3>Landing Page Campaign</h3>
+        <p>Single web page created specifically for marketing or promotional purposes.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="right">
-    <div class="overlay"></div>
-    <div class="tagline">Hi folks, it's Saul Goodman!</div>
-    <div class="tagline">Lawyer and Cybersecurity</div>
-    <div class="social-links">
-      <a href="#"><img src="Asset/email.png" alt="Email"></a>
-      <a href="#"><img src="Asset/github.png" alt="GitHub"></a>
-      <a href="#"><img src="Asset/instagram.webp" alt="Instagram"></a>
-      <a href="#"><img src="Asset/linkedin.png" alt="LinkedIn"></a>
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-scroll">
+      <div class="skill-card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
+      <div class="skill-card"><h3>Backend</h3><p>Node.js, Express, MongoDB</p></div>
+      <div class="skill-card"><h3>Design</h3><p>Figma, Photoshop, Illustrator</p></div>
+      <div class="skill-card"><h3>DevOps</h3><p>Docker, GitHub Actions</p></div>
+      <div class="skill-card"><h3>Soft Skills</h3><p>Problem Solving, Teamwork</p></div>
     </div>
-  </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Email</h3>
+        <p>tonypark@mail.com</p>
+        <a href="mailto:tonypark@mail.com" class="btn-contact">Send Email</a>
+      </div>
+      <div class="card">
+        <h3>LinkedIn</h3>
+        <p>linkedin.com/in/tonypark</p>
+        <a href="https://www.linkedin.com/in/clarissarahmazea/" class="btn-contact">Visit LinkedIn</a>
+      </div>
+      <div class="card">
+        <h3>GitHub</h3>
+        <p>github.com/tonypark</p>
+        <a href="https://github.com/clarissazea" class="btn-contact">View GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 My Portfolio. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
