@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tony Park - CV</title>
+  <title>James Morgan McGill - CV</title>
   <style>
     * {
       margin: 0;
@@ -29,17 +29,18 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
+    .duration {
+      float: right;
+      font-style: italic;
+      color: #555;
+    }
+
     .sidebar {
-      background: #133d36;
+      background: #460701e5;
       color: #fff;
       flex: 1;
       text-align: center;
       padding: 30px 20px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
 
     .cv-pic {
@@ -51,6 +52,23 @@
       border: 3px solid #fff;
     }
 
+   .cv-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: baseline;
+     margin-bottom: 6px;
+   }
+
+   .cv-item {
+    margin-bottom: 15px;
+   }
+
+    .cv-item ul {
+     list-style-type: disc;
+     margin-left: 20px;
+   }
+
+
     .sidebar h2 {
       font-size: 1.4rem;
       margin-bottom: 8px;
@@ -58,7 +76,7 @@
 
     .sidebar p {
       font-size: 0.9rem;
-      color: #faf8f8;
+      color: #ffecec;
     }
 
     .contact-box {
@@ -69,7 +87,6 @@
       text-align: left;
       font-size: 0.9rem;
       line-height: 1.6;
-      width: 100%;
     }
 
     .contact-box strong {
@@ -108,8 +125,8 @@
     .cv-content h3 {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: #133d36;
-      border-bottom: 2px solid #0e4607;
+      color: #2c3e50;
+      border-bottom: 2px solid #f28b82;
       display: inline-block;
       padding-bottom: 4px;
     }
@@ -127,56 +144,53 @@
       margin-left: 20px;
     }
 
-    .skill {
-      margin-bottom: 15px;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
     }
 
-    .skill-name {
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #2c3e50;
-    }
-
-    .skill-bar {
-      background: #e0e0e0;
-      border-radius: 20px;
-      overflow: hidden;
-      height: 20px;
-    }
-
-    .skill-level {
-      height: 100%;
-      border-radius: 20px;
-      background: linear-gradient(to right, #133d36, #6fe96f);
-    }
-
-  
-    .back-btn {
+    .skills-grid span {
       display: inline-block;
-      padding: 8px 16px;
-      background-color: #133d36;
+      background: #f28b82;
       color: #fff;
+      padding: 8px 12px;
       border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-      margin-bottom: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .back-btn:hover {
-      background-color: #0e2a23;
+    .skills-grid span:hover {
       transform: scale(1.05);
+      background: #e57373;
     }
+
+    .back-link {
+     display: inline-block;
+     margin-top: 20px;
+     text-decoration: none;
+     color: #f28b82;
+     font-weight: 500;
+     transition: color 0.2s ease;
+   }
+
+     .back-link:hover {
+     color: #e57373;
+    }
+
   </style>
 </head>
 <body>
   <div class="cv-container">
     <aside class="sidebar">
-      <img src="Asset/tony parker.jpg" alt="Tony parker" class="cv-pic">
-      <h2>Tony Park</h2>
-      <p>Frontend Developer Wannabe</p>
+      <img src="Asset/Saul1.jpg" alt="Saul Goodman" class="cv-pic">
+      <h2>James Morgan McGill</h2>
+      <p>Lawyer | Cybersecurity | Advisor</p>
 
       <div class="contact-box">
-        <p><strong>Email:</strong> tonypark@example.com</p>
+        <p><strong>Email:</strong> saul@example.com</p>
         <p><strong>Phone:</strong> +62 812-3456-7890</p>
         <p><strong>Address:</strong> Albuquerque, New Mexico</p>
       </div>
@@ -190,72 +204,81 @@
     </aside>
 
     <main class="cv-content">
-      
-      <a href="index.html" class="back-btn">← Back to Portfolio</a>
-
       <section>
         <h3>About Me</h3>
-        <p>I'm Tony Park
-A passionate Front-End Developer who loves building polished UI experiences.
-
-I specialize in crafting responsive, user-friendly websites and web applications. With a strong foundation in front-end technologies and a love for design, I enjoy transforming creative ideas into functional digital products. Beyond coding, I value teamwork, continuous learning, and problem-solving.</p>
+        <p>Seorang Pengacara sekaligus pemula Cybersecurity yang sedang berfokus mendalami python untuk AI development, network security dengan tools seperti Nmap dan Wireshark, serta web development menggunakan HTML/CSS/JavaScript.</p>
       </section>
 
-      <section>
-        <h3>Experience</h3>
-        <ul>
-          <li>
-            <strong>Front-End Designer & Developer (2020 - present) </strong>  
-            <p> Designed and developed responsive web pages using HTML, CSS, and JavaScript.
-                Created modern UI components with React.js and Tailwind CSS to improve user experience.
-                Collaborated with clients to turn mockups and wireframes from Figma into fully functional websites.
-                Ensured accessibility and cross-browser compatibility.</p>
-          </li>
-          <li>
-            <strong>Back-End Developer (2021 - present)</strong>  
-            <p>Built and maintained server-side applications using Node.js and Express.js.
-              Designed and optimized MySQL and MongoDB databases for storing application data.
-              Implemented REST APIs to connect front-end and back-end systems.
-              Ensured application security and efficient data processing.</p>
-          </li>
-          <li>
-            <strong>Cybersecurity Intern, ITS (2023–Present)</strong>  
-            <p>Assisted in securing student portals and applications, while learning ethical hacking and penetration testing practices.</p>
-          </li>
-        </ul>
-      </section>
+     <section>
+  <h3>Experience</h3>
 
-      <section>
-        <h3>Education</h3>
-        <ul>
-          <li>Bachelor of IT, University of American Samoa</li>
-          <li>Bachelor of IT, Institut Teknologi Sepuluh Nopember (Ongoing)</li>
-        </ul>
-      </section>
+  <div class="cv-item">
+    <div class="cv-header">
+      <strong>Associate Lawyer, Davis & Main</strong>
+      <span class="duration">2003 - 2004</span>
+    </div>
+    <ul>
+      <li>Menangani kasus hukum besar berdasarkan permintaan klien.</li>
+      <li>Mewakili klien dalam melakukan negosiasi kontrak bernilai tinggi.</li>
+    </ul>
+  </div>
 
-      <section>
-        <h3>Skills</h3>
-        <div class="skill">
-          <div class="skill-name">Frontend</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">Backend</div> 
-          <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">Design</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">DevOps</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">Soft Skills</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
-        </div>
-      </section>
+  <div class="cv-item">
+    <div class="cv-header">
+      <strong>Virtual Lawyer Assistant, Freelance</strong>
+      <span class="duration">2013 - Sekarang</span>
+    </div>
+    <ul>
+      <li>Menangani administrasi kasus-kasus hukum remote untuk klien.</li>
+      <li>Mengatur dan mengelola jadwal konsultasi virtual klien via zoom.</li>
+    </ul>
+  </div>
+
+  <div class="cv-item">
+    <div class="cv-header">
+      <strong>Cybersecurity Advisor, CyberIT</strong>
+      <span class="duration">2024 - Sekarang</span>
+    </div>
+    <ul>
+      <li>Mengembangkan sistem perlindungan sesuai permintaan klien.</li>
+      <li>Memberikan strategi keamanan digital kepada klien.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h3>Education</h3>
+
+  <div class="cv-item">
+    <div class="cv-header">
+      <strong>Law School, University of American Samoa</strong>
+      <span class="duration">Lulus pada tahun 2000</span>
+    </div>
+    <p>Juris Doctor (J.D.) in Law — lulus dengan spesialisasi hukum perdata dan pidana. Aktif di moot court competition.</p>
+  </div>
+
+  <div class="cv-item">
+    <div class="cv-header">
+      <strong>Institut Teknologi Loli</strong>
+      <span class="duration">Ongoing</span>
+    </div>
+    <p>Studi tambahan di Teknologi Informasi — Semester 5</p>
+  </div>
+ </section>
+
+   <section> 
+    <h3>Skills</h3> 
+    <div class="skills-grid"> 
+      <span>Cybersecurity</span> 
+      <span>Problem Solving</span> 
+      <span>Communication</span> 
+    </div> 
+  </section>
+
+  <section>
+  <a href="index.html" class="back-link">← Back to Portofolio</a>
+  </section>
+
     </main>
   </div>
 </body>
