@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Tony Park</title>
+  <title>Portfolio - James Morgan McGill</title>
   <style>
     body {
       margin: 0;
@@ -47,15 +47,18 @@
       background: linear-gradient(to right, #0d1f1e, #133d36);
       flex-wrap: wrap;
       gap: 30px;
+      overflow: hidden;
     }
 
     .hero img {
-      width: 250px;
-      height: 250px;
+      width: 100%;
+      max-width: 400px; 
+      height: auto;
       object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
-      border: none;
+      transform: scale(1.1);
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
     }
 
     .hero-text {
@@ -92,7 +95,6 @@
       margin: 0 auto;
     }
 
-
     .card {
       background: #133d36;
       padding: 20px;
@@ -120,14 +122,6 @@
       color: #d4a373;
     }
 
-    footer {
-      background: #0d1f1e;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-    }
-
     .btn-cv {
       display: inline-block;
       margin-top: 20px;
@@ -139,6 +133,7 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     .btn-cv:hover {
       background: #b07d55;
     }
@@ -176,74 +171,140 @@
       color: #d4a373;
     }
 
-    .btn-contact {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 18px;
-      background: transparent;
-      border: 2px solid #d4a373;
-      color: #d4a373;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-      font-size: 14px;
+    .contact-form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #133d36;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
-    .btn-contact:hover {
+
+    .contact-form .form-group {
+      margin-bottom: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      background: #0d1f1e;
+      color: #fff;
+      box-sizing: border-box;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #bbb;
+    }
+
+    .btn-submit {
+      display: inline-block;
+      padding: 12px 24px;
       background: #d4a373;
       color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #b07d55;
+    }
+
+    .social-border {
+      border: 1.5px solid #fff;  
+      border-radius: 50px;        
+      padding: 10px 20px;
+      display: table;
+      margin: 30px auto 0;
+      background: #133d36;    
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-links img {
+      width: 24px;  
+      height: 24px;
+      object-fit: contain;
+      transition: transform 0.3s;
+      filter: brightness(0) invert(1); 
+    }
+
+    .social-links img:hover {
+      transform: scale(1.15);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>My Portfolio</h1>
+    <h1>James Morgan McGill</h1>
     <nav>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <a href="cv.html">CV</a>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-text">
-      <h2>Hello, I'm Tony Park</h2>
-      <p>A passionate Front-End Developer who loves building polished UI experiences.</p>
-      <p>I specialize in crafting responsive, user-friendly websites and web applications. With a strong foundation in front-end technologies and a love for design, I enjoy transforming creative ideas into functional digital products. Beyond coding, I value teamwork, continuous learning, and problem-solving.</p>
+      <h2>Hi folks, Jimmy's here!</h2>
+      <p>Hi folks! My name’s James Morgan McGill—though most of you probably know me better as Saul Goodman. 
+          Once upon a time, I was a lawyer, but life has a funny way of turning things around. After a big shift in job prospects and demand, I decided to take on a whole new path in my life and became a third semester Information Technology student at Institut Teknologi Sepuluh Nopember (ITS).</p>
+      <p>While I’m diving deep into the world of coding, cybersecurity, and all that tech magic stuff, 
+          I still occasionally put on my lawyer hat when the situation calls for it. Old habits die hard, after all.</p>
       <a href="cv.html" class="btn-cv">View My CV</a>
     </div>
-    <img src="Asset/tony parker.jpg" alt="Profile Picture">
+    <img src="Asset/Saul3.png" alt="Profile Picture">
   </section>
 
   <section class="section" id="projects">
     <h2>Projects</h2>
     <div class="card-container">
       <div class="card">
-        <img src="https://screenshots.webflow.com/sites/5fde1642083cee155e2b1566/20230127082305_46a3e5a6a0f56f36c17a7e1a9aa3ca50.png" alt="Portfolio Website Project">
-        <h3>Portfolio Website</h3>
-        <p>Responsive personal website with modern design.</p>
+        <img src="Asset/SAUL.png" alt="S.A.U.L">
+        <h3>AI Lawyer Assistant S.A.U.L</h3>
+        <p>Creating a prototype tool S.A.U.L combining AI with legal research and consultation support.</p>
       </div>
       <div class="card">
-        <img src="https://tse4.mm.bing.net/th/id/OIP.kV-hdLuGZZRELvWZ3nATbgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mobile App Project">
-        <h3>Mobile App</h3>
-        <p>UI/UX for a learning application with gamification features.</p>
+        <img src="Asset/website.webp" alt="Website">
+        <h3>Website</h3>
+        <p>Creating an Informational website providing accessible legal knowledge and resources.</p>
       </div>
       <div class="card">
-        <img src="https://topflightapps.com/wp-content/uploads/2020/08/visual-vs-text-on-a-dashboard-.png" alt="Web Dashboard Project">
-        <h3>Web Dashboard</h3>
-        <p>Analytics dashboard with clean UI and smooth interaction.</p>
+        <img src="Asset/cysec.webp" alt="BCS">
+        <h3>Cybersecurity Tool BCS</h3>
+        <p>Creating a Tool Better Cyber Security focusing on security assessment and simple penetration testing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <h2>Experience</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Associate Lawyer at Davis & Main</h3>
+        <p>Handling major legal cases based on client requests</p>
       </div>
       <div class="card">
-        <img src="https://www.istats.com/wp-content/uploads/2018/01/best-website-builder.jpeg" alt="Website Builder Project">
-        <h3>Website Builder Project</h3>
-        <p>A project showcasing the best website builder design and layout concepts</p>
+        <h3>Wexler McGill Startup</h3>
+        <p>Co-founded a startup law firm offering innovative legal solutions.</p>
       </div>
-       <div class="card">
-        <img src="https://www.searchenginejournal.com/wp-content/uploads/2023/08/best-landing-page-examples-64e6080f990bb-sej.png" alt="Website Builder Project">
-        <h3>Landing Page Campaign</h3>
-        <p>Single web page created specifically for marketing or promotional purposes.</p>
+      <div class="card">
+        <h3>Virtual Assistant Lawyer</h3>
+        <p>Providing assistant on handling and administrating remote cases</p>
       </div>
     </div>
   </section>
@@ -251,38 +312,39 @@
   <section class="section" id="skills">
     <h2>Skills</h2>
     <div class="skills-scroll">
-      <div class="skill-card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
-      <div class="skill-card"><h3>Backend</h3><p>Node.js, Express, MongoDB</p></div>
-      <div class="skill-card"><h3>Design</h3><p>Figma, Photoshop, Illustrator</p></div>
-      <div class="skill-card"><h3>DevOps</h3><p>Docker, GitHub Actions</p></div>
-      <div class="skill-card"><h3>Soft Skills</h3><p>Problem Solving, Teamwork</p></div>
+      <div class="skill-card"><h3>Law</h3><p>Negotiation, Litigation, Legal Research</p></div>
+      <div class="skill-card"><h3>Technology</h3><p>Web development, Cybersecurity</p></div>
+      <div class="skill-card"><h3>Soft Skills</h3><p>Problem Solving, Communication</p></div>
     </div>
   </section>
 
   <section class="section" id="contact">
     <h2>Contact</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Email</h3>
-        <p>tonypark@mail.com</p>
-        <a href="mailto:tonypark@mail.com" class="btn-contact">Send Email</a>
-      </div>
-      <div class="card">
-        <h3>LinkedIn</h3>
-        <p>linkedin.com/in/tonypark</p>
-        <a href="https://www.linkedin.com/in/clarissarahmazea/" class="btn-contact">Visit LinkedIn</a>
-      </div>
-      <div class="card">
-        <h3>GitHub</h3>
-        <p>github.com/tonypark</p>
-        <a href="https://github.com/clarissazea" class="btn-contact">View GitHub</a>
-      </div>
+    <div class="contact-form-container">
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
     </div>
-  </section>
+  </div>
 
-  <footer>
-    © 2025 My Portfolio. All Rights Reserved.
-  </footer>
-
+  <div class="social-border">
+    <div class="social-links">
+      <a href="#"><img src="Asset/email.png" alt="Email"></a>
+      <a href="#"><img src="Asset/github.png" alt="GitHub"></a>
+      <a href="#"><img src="Asset/instagram.webp" alt="Instagram"></a>
+      <a href="#"><img src="Asset/linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
 </body>
 </html>
+</html>
+
